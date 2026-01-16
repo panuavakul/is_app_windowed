@@ -1,7 +1,6 @@
 This package is for checking if the App is running in windowed mode.
 In iPadOS 26, Apple introduced windowed mode for iPad apps, allowing users to
-resize and move apps around the screen. This package helps developers to detect
-if their app is running in windowed mode, enabling them to adjust their UI and
+resize and move apps around the screen. When the app is in Windows mode there will be a 🚥, which is shown at the top left corner of the app window. This will likely block the button of the top left, which are usually important button like back and such. This package helps developers to detect if their app is running in windowed mode, enabling them to adjust their UI and
 functionality accordingly.
 
 ## Usage
@@ -25,6 +24,10 @@ void main() {
 ```dart
 bool isWindowed = IsAppWindowed.of(context).isWindowed;
 ```
+
+## Common use cases
+
+### Slide the
 
 ## Additional information
 
