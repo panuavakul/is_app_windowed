@@ -1,7 +1,7 @@
 name: is_app_windowed
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "This package is for checking if the App is running in windowed mode."
+version: 0.1.0
+repository: https://github.com/panuavakul/is_app_windowed
 
 environment:
   sdk: ^3.9.2
