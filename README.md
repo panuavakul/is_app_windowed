@@ -1,39 +1,33 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+This package is for checking if the App is running in windowed mode.
+In iPadOS 26, Apple introduced windowed mode for iPad apps, allowing users to
+resize and move apps around the screen. This package helps developers to detect
+if their app is running in windowed mode, enabling them to adjust their UI and
+functionality accordingly.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+### Import the package
 
 ```dart
-const like = 'sample';
+import 'package:is_app_windowed/is_app_windowed.dart';
+```
+
+### Wrap the app with
+
+```dart
+void main() {
+  runApp(IsAppWindowedProvider(child: const MyApp()));
+}
+```
+
+### Check if the app is windowed
+
+```dart
+bool isWindowed = IsAppWindowed.of(context).isWindowed;
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This package is specifically designed for iPadOS, I have not tested it on other Android tablets that may also support windowed mode.
+
+If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request on the GitHub repository.
